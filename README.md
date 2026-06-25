@@ -3,7 +3,7 @@
 # Diamond QC
 
 A small [Claude Code](https://claude.com/claude-code) skill for catching errors in
-an artifact **before it ships** — study notes, code, prose, research, configs, data;
+an artifact **before it ships**: study notes, code, prose, research, configs, data;
 anything with claims you can actually check.
 
 It's named for the shape: one **author** at the top, two independent **auditors**
@@ -12,26 +12,26 @@ across the middle, one **meta-auditor** at the bottom point. The bottom point is
 
 ## Why it's adversarial (and agentic)
 
-A single reviewer — including the author — shares blind spots with itself. Re-reading
+A single reviewer (including the author) shares blind spots with itself. Re-reading
 your own work mostly re-confirms it. Diamond QC fixes that by spreading the check
 across several independent agents that are deliberately aimed at the artifact from
 **different angles**:
 
-- **Author** drafts, then verifies every claim it can *by execution* — runs the code,
+- **Author** drafts, then verifies every claim it can *by execution*: runs the code,
   computes the numbers, traces each fact to a source. Known-shaky work is fixed here,
   not passed downstream.
-- **Auditor A — fidelity.** Does every claim match the source/spec/reality? Hunts
+- **Auditor A, fidelity.** Does every claim match the source/spec/reality? Hunts
   fabrications, distortions, and unsupported assertions, quoting exact text.
-- **Auditor B — execution.** Runs the code, runs the numbers, checks types, shapes,
+- **Auditor B, execution.** Runs the code, runs the numbers, checks types, shapes,
   boundaries, edge cases. "I checked it" is not allowed; it shows the run.
-- **Meta-auditor — watches the watchmen.** Catches what *both* auditors missed (their
+- **Meta-auditor, watches the watchmen.** Catches what *both* auditors missed (their
   shared blind spot) **and** overturns what an auditor got wrong (false positives),
   then delivers the final verdict and the minimal set of fixes.
 
 The point is **decorrelation, not repetition**. Two auditors running the same check
 share the same blind spot and waste a seat. Diversity of attack is what catches
-errors. The skill verifies by **evidence, not assertion** — recall is not
-verification — and escalates effort by *risk*, not by running the same pass twice.
+errors. The skill verifies by **evidence, not assertion** (recall is not
+verification) and escalates effort by *risk*, not by running the same pass twice.
 
 It's also right-sized: a tiering rule (SKIP / LIGHT / FULL) keeps you from spinning
 up five subagents to check a one-line fix.
@@ -44,7 +44,7 @@ up five subagents to check a one-line fix.
 ## What you need
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code) installed.
-- That's it — the skill is a single Markdown file. The auditors run as Claude Code
+- That's it. The skill is a single Markdown file. The auditors run as Claude Code
   subagents, so no extra dependencies, API keys, or services.
 
 ## Install
@@ -74,7 +74,7 @@ Just ask Claude Code to run it, or name it directly:
 
 - "**Diamond QC** this before I send it."
 - "Run **the Diamond** on this analysis."
-- "**Who watches the watchmen** — verify these numbers."
+- "**Who watches the watchmen**, verify these numbers."
 - Or any request to rigorously verify / fact-check / QC something before it ships.
 
 Claude picks the tier (SKIP / LIGHT / FULL) based on stakes and tells you which it
