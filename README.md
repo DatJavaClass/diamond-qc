@@ -36,6 +36,11 @@ verification — and escalates effort by *risk*, not by running the same pass tw
 It's also right-sized: a tiering rule (SKIP / LIGHT / FULL) keeps you from spinning
 up five subagents to check a one-line fix.
 
+<p align="center">
+  <a href="./diamond-qc-diagram.pdf"><img alt="The Diamond QC diagram: author at top, two decorrelated auditors across the middle, meta-auditor at the bottom, and the flow from draft to ship" src="./diamond-qc-diagram.png" width="840"></a>
+</p>
+<p align="center"><sub>The full protocol at a glance. Click for the printable PDF.</sub></p>
+
 ## What you need
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code) installed.
