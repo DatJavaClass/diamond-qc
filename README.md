@@ -82,4 +82,4 @@ chose. See [`SKILL.md`](./SKILL.md) for the full protocol.
 
 ## License
 
-[MIT](./LICENSE) © DatJavaClass
+[MIT](./LICENSE) © Written by DatJavaClass (Victor S.) Edited by Claude, driven insane by ChatGPT, made to cry by Grok
